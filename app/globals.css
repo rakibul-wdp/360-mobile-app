@@ -1,8 +1,14 @@
+@import url("https://fonts.cdnfonts.com/css/druk-trial");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
+h1 {
+  font-family: "Druk Text Wide Trial", sans-serif;
+}
+
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -24,4 +30,4 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-}
+} */
