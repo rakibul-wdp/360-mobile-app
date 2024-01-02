@@ -7,8 +7,13 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        main: "#141029cc",
+        "main-light": "#1410299c",
+      },
       fontFamily: {
-        druk: "Druk Text Wide Trial",
+        druk: ["Druk Text Wide Trial", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
