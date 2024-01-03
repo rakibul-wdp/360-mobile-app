@@ -1,13 +1,11 @@
 "use client";
 
 import MainContainer from "@/components/common/MainContainer";
-import { ProfilePicture } from "@/public/assets/icons";
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { PiEye, PiEyeSlash } from "react-icons/pi";
 
-const SignUp = () => {
+const SignIn = () => {
   const [showPass, setShowPass] = useState(false);
 
   const showPassword = () => {
@@ -17,29 +15,9 @@ const SignUp = () => {
   return (
     <MainContainer>
       <h1 className="pt-[204px] text-main font-druk text-2xl font-black tracking-tighter uppercase">
-        Sign Up
+        Sign In
       </h1>
-      <div className="bg-white my-8 p-4 rounded-3xl flex items-center gap-4">
-        <Image src={ProfilePicture} alt="set a profile picture" />
-        <p className="font-montserrat text-main text-sm font-semibold">
-          Set a profile picture
-        </p>
-      </div>
-      <form className="bg-white pl-4 py-3 rounded-3xl">
-        <div className="pt-3 pb-8 flex items-center justify-between relative">
-          <label
-            htmlFor="name"
-            className="font-montserrat text-main-light text-sm leading-6 font-medium absolute z-10"
-          >
-            Name
-          </label>
-          <input
-            type="text"
-            name="name"
-            id=""
-            className="outline-none border-b pl-5 absolute right-0 left-8 top-3"
-          />
-        </div>
+      <form className="bg-white mt-8 pl-4 py-3 rounded-3xl">
         <div className="py-5 flex items-center justify-between relative">
           <label
             htmlFor="email"
@@ -71,24 +49,24 @@ const SignUp = () => {
           </div>
         </div>
       </form>
-      <div className="mt-[150px]">
+      <div className="mt-[310px]">
         <p className="text-center font-montserrat text-main-light text-sm leading-6 font-medium">
-          Terms & Privacy Policy
+          Forgot your password?
         </p>
         <div className="mt-8 flex items-center justify-between">
           <div>
             <p className="font-montserrat text-main-light text-sm leading-6 font-medium">
-              Already a Member?
+              Not a member?
             </p>
             <Link
-              href="/signin"
+              href="/signup"
               className="font-montserrat text-[#00B8B9] text-sm leading-6 font-semibold"
             >
-              Sign in
+              Register now
             </Link>
           </div>
           <button className="text-white text-center font-montserrat text-base leading-7 font-semibold rounded-xl px-[37px] py-[10px] bg-gradient-to-br from-[#0FA] via-[#4579F5] to-[#9C42F5] shadow-xl">
-            Sign up
+            Sign in
           </button>
         </div>
       </div>
@@ -96,4 +74,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default SignIn;
