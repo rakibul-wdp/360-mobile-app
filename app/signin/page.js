@@ -1,6 +1,6 @@
 "use client";
 
-import WelcomeExchange from "@/components/WelcomeExchange";
+import Welcome from "@/components/Welcome";
 import MainContainer from "@/components/common/MainContainer";
 import Link from "next/link";
 import { useState } from "react";
@@ -21,7 +21,7 @@ const SignIn = () => {
   return (
     <>
       {showWelcome ? (
-        <WelcomeExchange />
+        <Welcome />
       ) : (
         <MainContainer>
           <h1 className="pt-[204px] text-main font-druk text-2xl font-black tracking-tighter uppercase">
