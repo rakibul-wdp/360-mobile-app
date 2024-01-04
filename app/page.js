@@ -1,5 +1,6 @@
+import HomeHero from "@/components/HomeHero";
+import HomeMain from "@/components/HomeMain";
 import Header from "@/components/common/Header";
-import HomeHero from "@/components/common/HomeHero";
 import MainContainer from "@/components/common/MainContainer";
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
     <MainContainer marginTop={"main"}>
       <Header />
       <HomeHero />
+      <HomeMain />
     </MainContainer>
   );
 }
