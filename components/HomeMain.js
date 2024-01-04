@@ -1,6 +1,5 @@
-import { Ethereum } from "@/public/assets/images";
+import { homeTokens } from "@/public/data";
 import Image from "next/image";
-import { BiSolidUpArrow } from "react-icons/bi";
 import { MdKeyboardArrowDown, MdPlayArrow } from "react-icons/md";
 
 const HomeMain = () => {
@@ -21,33 +20,52 @@ const HomeMain = () => {
         </div>
       </div>
 
-      <div className="flex items-center justify-between">
-        <div className="flex items-center justify-between gap-4">
-          <Image src={Ethereum} alt="crypto currency" />
-          <div className="flex flex-col items-start justify-center">
-            <h4 className="text-main font-montserrat text-base leading-7 font-semibold">
-              Ethereum
+      {homeTokens.map((token) => (
+        <div
+          className={`flex items-center justify-between ${
+            token.id === 2 ? "my-10" : token.id === 3 ? "mb-10" : ""
+          }`}
+          key={token.id}
+        >
+          <div className="flex items-center justify-between gap-4">
+            <Image src={token.image} alt="crypto currency" />
+            <div className="flex flex-col items-start justify-center">
+              <h4 className="text-main font-montserrat text-base leading-7 font-semibold">
+                {token.tokenName}
+              </h4>
+              <p className="text-main-light font-montserrat text-[14px] leading-4 font-medium">
+                {token.tokenPath}
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col items-end justify-center">
+            <h4
+              className="text-main font-gilroy text-base uppercase"
+              style={{ letterSpacing: "-0.4px" }}
+            >
+              {token.mainBalance}
             </h4>
-            <p className="text-main-light font-montserrat text-[14px] leading-4 font-medium">
-              ETH
-            </p>
+            <div className="flex items-center justify-between font-gilroy text-[13px] leading-4">
+              <MdPlayArrow
+                className={`${
+                  token.id === 3
+                    ? "rotate-90 text-[#FF5E00]"
+                    : "-rotate-90 text-[#00B8B9]"
+                }`}
+              />
+              <p
+                className={`${
+                  token.id === 3 ? "text-[#FF5E00]" : "text-[#00B8B9]"
+                }`}
+              >
+                {token.percent}%
+              </p>
+              <hr className="border-2 rounded-full border-gray-400 mx-2" />
+              <p className="text-main-light">${token.balance}</p>
+            </div>
           </div>
         </div>
-        <div className="flex flex-col items-end justify-center">
-          <h4
-            className="text-main font-gilroy text-base uppercase"
-            style={{ letterSpacing: "-0.4px" }}
-          >
-            18.00269408
-          </h4>
-          <div className="flex items-center justify-between font-gilroy text-[13px] leading-4">
-            <MdPlayArrow className="-rotate-90 text-[#00B8B9]" />
-            <p className="text-[#00B8B9]">0.51%</p>
-            <hr className="border-2 rounded-full border-gray-400 mx-2" />
-            <p className="text-main-light">$61,512.06</p>
-          </div>
-        </div>
-      </div>
+      ))}
     </div>
   );
 };
