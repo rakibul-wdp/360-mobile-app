@@ -14,6 +14,7 @@ module.exports = {
       fontFamily: {
         druk: ["Druk Text Wide Trial", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
+        gilroy: ["Gilroy", "sans-serif"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

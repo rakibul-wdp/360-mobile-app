@@ -1,5 +1,6 @@
 const MainContainer = ({ children, marginTop }) => {
-  const margin = marginTop === "welcome" && "pt-11";
+  const margin =
+    (marginTop === "welcome" && "pt-11") || (marginTop === "main" && "pt-12");
 
   return (
     <main
