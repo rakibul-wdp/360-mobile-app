@@ -23,7 +23,13 @@ const HomeMain = () => {
       {homeTokens.map((token) => (
         <div
           className={`flex items-center justify-between ${
-            token.id === 2 ? "my-10" : token.id === 3 ? "mb-10" : ""
+            token.id === 2
+              ? "my-10"
+              : token.id === 3
+              ? "mb-10"
+              : token.id === 4
+              ? "mb-8"
+              : ""
           }`}
           key={token.id}
         >
