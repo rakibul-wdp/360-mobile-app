@@ -7,7 +7,7 @@ import MainContainer from "@/components/common/MainContainer";
 export default function Home() {
   return (
     <MainContainer marginTop={"main"}>
-      <Header />
+      <Header title={"hi casmir ✌🏽"} />
       <HomeHero />
       <HomeMain />
       <FooterNav />
