@@ -13,7 +13,7 @@ const LiveStockHero = () => {
         initial={{ opacity: 0 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.5 }}
-        className="my-8"
+        className="mt-8 mb-7"
       >
         <Splide
           options={{

@@ -1,19 +1,18 @@
-import HomeMain from "@/components/HomeMain";
-import LiveStockHero from "@/components/LiveStockHero";
 import LiveStockMain from "@/components/LiveStockMain";
+import MenuHero from "@/components/MenuHero";
 import FooterNav from "@/components/common/FooterNav";
 import Header from "@/components/common/Header";
 import MainContainer from "@/components/common/MainContainer";
 
-const LiveStock = () => {
+const Menu = () => {
   return (
     <MainContainer marginTop={"main"}>
-      <Header title={"live stock 📊"} />
-      <LiveStockHero />
+      <Header title={"Menu"} />
+      <MenuHero />
       <LiveStockMain />
       <FooterNav />
     </MainContainer>
   );
 };
 
-export default LiveStock;
+export default Menu;
