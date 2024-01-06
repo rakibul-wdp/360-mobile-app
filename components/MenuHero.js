@@ -20,11 +20,15 @@ const MenuHero = () => {
       <div className="mt-4 flex items-center justify-between gap-[15px]">
         <div className="bg-white rounded-3xl flex flex-col items-start justify-center gap-4 p-4 w-[148px] h-[116px]">
           <Image src={UpArrow} alt="increase" />
-          <h4>Deposit</h4>
+          <h4 className="text-main font-montserrat text-sm font-semibold">
+            Deposit
+          </h4>
         </div>
         <div className="bg-white rounded-3xl flex flex-col items-start justify-center gap-4 p-4 w-[148px] h-[116px]">
           <Image src={DownArrow} alt="decrees" />
-          <h4>Withdraw</h4>
+          <h4 className="text-main font-montserrat text-sm font-semibold">
+            Withdraw
+          </h4>
         </div>
       </div>
     </div>
