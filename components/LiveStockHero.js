@@ -28,7 +28,7 @@ const LiveStockHero = () => {
           {liveStockHero.map((item) => (
             <SplideSlide key={item.id}>
               <div className="bg-gradient-to-br from-gray-800 via-gray-700 to-gray-900 shadow-lg text-white font-montserrat text-sm leading-6 font-semibold rounded-xl px-4 py-1.5 overflow-hidden relative">
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between gap-2">
                   <p>{item.text}</p> {item?.icon}
                 </div>
               </div>

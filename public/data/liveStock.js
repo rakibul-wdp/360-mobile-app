@@ -8,7 +8,7 @@ export const liveStockHero = [
   {
     id: 2,
     text: "Sort by Market Cap",
-    icon: <HiOutlineArrowSmDown />,
+    icon: <HiOutlineArrowSmDown className="text-[#00b8b9] text-xl" />,
   },
   {
     id: 3,

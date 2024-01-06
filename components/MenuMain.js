@@ -1,7 +1,11 @@
 import { menuAccounts } from "@/public/data/menu";
 import Image from "next/image";
 
-const MenuMain = () => {
+const MenuMain = ({ goProfileAndWithdraw }) => {
+  const goProfile = (id) => {
+    if (id === 1) goProfileAndWithdraw(1);
+  };
+
   return (
     <div className="mb-6">
       <h4 className="text-main font-montserrat text-sm font-semibold ml-12 mb-4">
@@ -11,7 +15,10 @@ const MenuMain = () => {
       <div className="bg-white rounded-3xl">
         {menuAccounts.slice(0, 5).map((menuAccount) => (
           <div key={menuAccount.id}>
-            <div className="flex items-center justify-between p-3">
+            <div
+              className="flex items-center justify-between p-3 cursor-pointer"
+              onClick={() => goProfile(menuAccount.id)}
+            >
               <div className="flex items-center justify-between gap-3">
                 <Image src={menuAccount.logo} alt="account logo" />
                 <p className="text-main font-montserrat text-sm leading-6 font-medium">
@@ -37,7 +44,7 @@ const MenuMain = () => {
       <div className="bg-white rounded-xl mt-4">
         {menuAccounts.slice(5, 6).map((menuAccount) => (
           <div key={menuAccount.id}>
-            <div className="flex items-center justify-between p-3">
+            <div className="flex items-center justify-between p-3 cursor-pointer">
               <div className="flex items-center justify-between gap-3">
                 <Image src={menuAccount.logo} alt="account logo" />
                 <p className="text-main font-montserrat text-sm leading-6 font-medium">
