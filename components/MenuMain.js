@@ -1,4 +1,4 @@
-import { menuAccounts } from "@/public/data/menu";
+import { menuAccounts } from "@/public/data";
 import Image from "next/image";
 
 const MenuMain = ({ goProfileAndWithdraw }) => {
