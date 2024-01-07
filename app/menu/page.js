@@ -21,7 +21,7 @@ const Menu = () => {
       {profileAndWithdraw === 1 ? (
         <Profile goProfileAndWithdraw={goProfileAndWithdraw} />
       ) : profileAndWithdraw === 2 ? (
-        <Withdraw />
+        <Withdraw goProfileAndWithdraw={goProfileAndWithdraw} />
       ) : (
         <>
           <Header title={"Menu"} />

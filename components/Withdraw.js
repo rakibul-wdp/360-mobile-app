@@ -1,5 +1,11 @@
-const Withdraw = () => {
-  return <div>Withdraw</div>;
+import WithdrawHeader from "./WithdrawHeader";
+
+const Withdraw = ({ goProfileAndWithdraw }) => {
+  return (
+    <div>
+      <WithdrawHeader goProfileAndWithdraw={goProfileAndWithdraw} />
+    </div>
+  );
 };
 
 export default Withdraw;
