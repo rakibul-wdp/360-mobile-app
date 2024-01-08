@@ -1,4 +1,6 @@
+import { HomeHeroBG } from "@/public/assets/images";
 import Heading from "@/universal/Heading";
+import Image from "next/image";
 import { BsThreeDots } from "react-icons/bs";
 import { HiOutlineArrowSmDown, HiOutlineArrowSmUp } from "react-icons/hi";
 
@@ -11,10 +13,11 @@ const HomeHero = () => {
           "8px 8px 24px 0px rgba(9, 13, 20, 0.40), -4px -4px 8px 0px rgba(224, 224, 255, 0.04), 0px 1px 1px 0px rgba(9, 13, 20, 0.40)",
       }}
     >
-      <div className="flex items-center justify-between mb-6">
+      <div className="flex items-center justify-between mb-6 pl-6 relative z-10">
         <Heading textSize={"24"} color={"white"} marginLeft={"ml"}>
           $61,576.60
         </Heading>
+        <Image src={HomeHeroBG} alt="" className="absolute -top-5 -left-4" />
         <BsThreeDots className="text-2xl" />
       </div>
       <div className="flex items-center justify-between">

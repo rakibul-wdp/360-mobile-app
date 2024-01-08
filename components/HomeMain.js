@@ -1,6 +1,7 @@
 import { homeTokens } from "@/public/data";
 import Image from "next/image";
-import { MdKeyboardArrowDown, MdPlayArrow } from "react-icons/md";
+import { MdPlayArrow } from "react-icons/md";
+import HomeDropdown from "./HomeDropdown";
 
 const HomeMain = () => {
   return (
@@ -12,12 +13,13 @@ const HomeMain = () => {
         >
           Tokens
         </h3>
-        <div className="flex items-center justify-between gap-1 pl-4 py-1.5 pr-2 rounded-xl bg-gradient-to-br from-gray-800 via-gray-700 to-gray-900 shadow-2xl">
+        <HomeDropdown />
+        {/* <div className="flex items-center justify-between gap-1 pl-4 py-1.5 pr-2 rounded-xl bg-gradient-to-br from-gray-800 via-gray-700 to-gray-900 shadow-2xl">
           <p className="text-white font-montserrat text-sm leading-6 font-semibold ">
             All
           </p>
           <MdKeyboardArrowDown className="text-2xl text-gray-300" />
-        </div>
+        </div> */}
       </div>
 
       {homeTokens.map((token) => (

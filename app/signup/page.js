@@ -3,6 +3,7 @@
 import Welcome from "@/components/Welcome";
 import MainContainer from "@/components/common/MainContainer";
 import { ProfilePicture } from "@/public/assets/icons";
+import Heading from "@/universal/Heading";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -25,10 +26,10 @@ const SignUp = () => {
       {showWelcome ? (
         <Welcome />
       ) : (
-        <MainContainer>
-          <h1 className="pt-[204px] text-main font-druk text-2xl font-black tracking-tighter uppercase">
+        <MainContainer marginTop={"auth"}>
+          <Heading textSize={"24"} color={"main"}>
             Sign Up
-          </h1>
+          </Heading>
           <div className="bg-white my-8 p-4 rounded-3xl flex items-center gap-4">
             <Image src={ProfilePicture} alt="set a profile picture" />
             <p className="font-montserrat text-main text-sm font-semibold">

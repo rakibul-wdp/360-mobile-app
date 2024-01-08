@@ -1,6 +1,8 @@
 const MainContainer = ({ children, marginTop }) => {
   const margin =
-    (marginTop === "welcome" && "pt-11") || (marginTop === "main" && "pt-12");
+    (marginTop === "welcome" && "pt-11") ||
+    (marginTop === "main" && "pt-12") ||
+    (marginTop === "auth" && "pt-[204px]");
 
   return (
     <main

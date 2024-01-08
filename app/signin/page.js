@@ -2,6 +2,7 @@
 
 import Welcome from "@/components/Welcome";
 import MainContainer from "@/components/common/MainContainer";
+import Heading from "@/universal/Heading";
 import Link from "next/link";
 import { useState } from "react";
 import { PiEye, PiEyeSlash } from "react-icons/pi";
@@ -23,10 +24,10 @@ const SignIn = () => {
       {showWelcome ? (
         <Welcome />
       ) : (
-        <MainContainer>
-          <h1 className="pt-[204px] text-main font-druk text-2xl font-black tracking-tighter uppercase">
+        <MainContainer marginTop={"auth"}>
+          <Heading textSize={"24"} color={"main"}>
             Sign In
-          </h1>
+          </Heading>
           <form className="bg-white mt-8 pl-4 py-3 rounded-3xl">
             <div className="py-5 flex items-center justify-between relative">
               <label
